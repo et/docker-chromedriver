@@ -1,5 +1,5 @@
 FROM debian:jessie
-MAINTAINER Rob Cherry
+MAINTAINER Eric Thomas
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
