@@ -1,3 +1,9 @@
+# Introduction
+
+This is a version of `robcherry/docker-chromedriver` that runs on the standard port of 9515.
+See: https://github.com/RobCherry/docker-chromedriver/issues/10
+
+
 # Docker container for creating a ChromeDriver server
 
 Includes
@@ -38,11 +44,11 @@ docker run --name chromedriver -P -d robcherry/docker-chromedriver:latest
 If you want to restrict the ports to your local environment, you can do so using `-p`.
 
 ```
-docker run --name chromedriver -p 127.0.0.1::4444 robcherry/docker-chromedriver:latest
+docker run --name chromedriver -p 127.0.0.1::9515 robcherry/docker-chromedriver:latest
 ```
 
 ***Note:*** ChromeDriver restricts access to local connections by default.  To allow external connections, you can pass in a custom `CHROMEDRIVER_WHITELISTED_IPS` environment variable.  By default, this is set to `127.0.0.1`, but this can by any comma separated list of IP addresses.  Setting the value as empty will allow all remote connections.
 
 ```
-docker run --name chromedriver -p 127.0.0.1::4444 -e CHROMEDRIVER_WHITELISTED_IPS='' robcherry/docker-chromedriver:latest
+docker run --name chromedriver -p 127.0.0.1::9515 -e CHROMEDRIVER_WHITELISTED_IPS='' robcherry/docker-chromedriver:latest
 ```
